@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Item List</title>
+</head>
+<body>
+    <h1>Item List</h1>
+    <ul>
+        {% for item in object_list %}
+            <li>{{ item.name }} - ${{ item.price }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'bill-create' %}">Generate Bill</a>
+</body>
+</html>
